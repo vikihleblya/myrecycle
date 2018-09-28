@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">myrecycle</string>
+    <string name="input_name_application">Введите название заявки</string>
+    <string name="input_desc_application">Введите описание заявки</string>
+    <string name="request_step_1">Новая заявка. Шаг 1/2</string>
 </resources>

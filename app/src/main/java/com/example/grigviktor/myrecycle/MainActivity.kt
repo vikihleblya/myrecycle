@@ -1,8 +1,10 @@
 package com.example.grigviktor.myrecycle
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -17,5 +19,12 @@ class MainActivity : AppCompatActivity() {
 
         val adapter = TitleAdapter(this, Supplier.titles)
         recyclerView.adapter = adapter
+
+        imageButton.setOnClickListener{
+            val intent = Intent(this, GetRequestStepOne::class.java)
+            startActivity(intent)
+        }
+
     }
+
 }
