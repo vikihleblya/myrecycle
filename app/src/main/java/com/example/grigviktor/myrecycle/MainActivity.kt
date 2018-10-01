@@ -22,8 +22,12 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
 
         searchView.setOnClickListener { searchView.isIconified = false }
-    }
+
+        fab.setOnClickListener{
+            val intent = Intent(this, GetRequestStepOne::class.java)
+            startActivity(intent)
+        }
 
     }
 
-
+}

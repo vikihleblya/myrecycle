@@ -18,6 +18,5 @@ object Supplier {
             PersonNeed("Fuck you Debbie", "Explicit Content"),
             PersonNeed("Now this looks like", "Is Job for me"),
             PersonNeed("Common User Interface", "Nenene")
-
             )
 }
