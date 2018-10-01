@@ -3,4 +3,7 @@
     <string name="input_name_application">Введите название заявки</string>
     <string name="input_desc_application">Введите описание заявки</string>
     <string name="request_step_1">Новая заявка. Шаг 1/2</string>
+    <string name="list_item_description">Описание заявки</string>
+    <string name="list_item_tag">Тэг</string>
+    <string name="search_searchview">Поиск...</string>
 </resources>

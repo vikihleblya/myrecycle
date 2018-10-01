@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        supportActionBar?.hide()
 
         val layoutManager = LinearLayoutManager(this)
         layoutManager.orientation = LinearLayoutManager.VERTICAL
@@ -20,11 +21,9 @@ class MainActivity : AppCompatActivity() {
         val adapter = TitleAdapter(this, Supplier.titles)
         recyclerView.adapter = adapter
 
-        imageButton.setOnClickListener{
-            val intent = Intent(this, GetRequestStepOne::class.java)
-            startActivity(intent)
-        }
+        searchView.setOnClickListener { searchView.isIconified = false }
+    }
 
     }
 
-}
+
