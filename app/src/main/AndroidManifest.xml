@@ -21,14 +21,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".GetRequestStepOne"
-            android:label="@string/request_step_1"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity">
+
+        </activity>
+
         <activity
             android:name=".GetRequestStepTwo"
-            android:label="@string/title_activity_get_request_step_two"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:label="@string/title_activity_get_request_step_two">
+        </activity>
     </application>
 
 </manifest>

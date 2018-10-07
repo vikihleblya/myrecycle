@@ -6,7 +6,11 @@ import android.content.Intent
 import android.support.v7.view.menu.MenuBuilder
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.*
+import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.activity_get_request_step_one.*
+import java.util.zip.Inflater
 
 
 class GetRequestStepOne : AppCompatActivity() {
@@ -14,26 +18,28 @@ class GetRequestStepOne : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_get_request_step_one)
-        setSupportActionBar(toolbar)
-    }
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.toolbar_menu, menu)
-        return true
-    }
-    override fun onPrepareOptionsMenu(menu: Menu?): Boolean {
-        menu?.let {
-            if (menu is MenuBuilder) {
-                try {
-                    val field = menu.javaClass.getDeclaredField("mOptionalIconsVisible")
-                    field.isAccessible = true
-                    field.setBoolean(menu, true)
-                } catch (ignored: Exception) {
-                    // ignored exception
-                }
-            }
+
+        goToStepTwo.setOnClickListener{
+            val intent = Intent(this, GetRequestStepTwo::class.java)
+            startActivity(intent)
         }
-        return super.onPrepareOptionsMenu(menu)
+
+        goToMainActivity.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        val myStrings = arrayOf("Горняк-1", "Горняк-2", "Металлург", "Дом-коммуна")
+        spinner.adapter = ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item, myStrings)
+        spinner.onItemSelectedListener= object : AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(parent: AdapterView<*>?) {}
+
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {}
+
+        }
+
     }
+
 
 }
 

@@ -8,24 +8,24 @@ import android.view.ViewGroup
 import kotlinx.android.synthetic.main.list_item.view.*
 
 class TitleAdapter(val context: Context, val titles: List<PersonNeed>) : RecyclerView.Adapter<TitleAdapter.MyViewHolder>(){
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.list_item, parent, false)
         return MyViewHolder(view)
     }
 
-    override fun getItemCount(): Int {
-        return titles.size
-    }
+    override fun getItemCount() = titles.size
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val item = titles[position]
-        holder.setData(item, position)
+        holder.setData(item)
     }
 
-    inner class MyViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView){
+    class MyViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView){
 
-        fun setData(title: PersonNeed?, position: Int){
+        fun setData(title: PersonNeed?){
             itemView.txvTitle.text = title!!.title
+            itemView.tags.text = title!!.Tag
         }
     }
 }

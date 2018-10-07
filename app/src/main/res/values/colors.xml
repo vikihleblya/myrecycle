@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#2e3ff5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimaryDark">#ffffff</color>
     <color name="colorAccent">#ffffff</color>
     <color name="primary_text_material_dark">#00ac1616</color>
     <color name="primary_text_material_dark_1">#6c0c0c</color>
@@ -9,4 +9,5 @@
     <color name="cardview_light_background">#9c9c9c</color>
     <color name="text_color_primary">#dd000000</color>
     <color name="text_color_secondary">#e62121</color>
+    <color name="shadow_tags">#d1d1d1</color>
 </resources>
